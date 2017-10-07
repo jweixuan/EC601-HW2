@@ -22,23 +22,24 @@ public class FirstActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.first_layout);
         Button button1 = (Button) findViewById(R.id.button_1);//获取到在布局文件中定义的元素
-        Button button_menu = (Button) findViewById(R.id.menu);
+        //Button button_menu = (Button) findViewById(R.id.menu);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                intent.setData(Uri.parse("http://www.google.com"));
                 startActivity(intent);
             }
         });
-
-        button_menu.setOnClickListener(new View.OnClickListener() {
+        /*
+        //button_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ;
             }
-        });
+        });*/
     }
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -57,5 +58,5 @@ public class FirstActivity extends Activity {
             default:
         }
         return true;
-    }
+    }*/
 }
